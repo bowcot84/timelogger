@@ -20,3 +20,8 @@ Example...
 ```stop,Thu Jun 11 2013 12:49:43 GMT+0100 (BST),6821237```  
 Currently saves to /log.csv  
 Currently supported desktop services are gnome and freedesktop  
+
+#### Changes  
+
+"Extra logging, bump package"  
+"First commit"  

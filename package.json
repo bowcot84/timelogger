@@ -1,9 +1,13 @@
 {
   "name": "timelogger",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Records log in and log out time on Centos",
   "main": "index.js",
   "author": "bowcot84",
+  "respository": "http://github.com/bowcot84/timelogger",
+  "scripts": {
+    "build": "node lib/createReadme.js"
+  },
   "license": "ISC",
   "os": ["linux"],
   "dependencies": {
