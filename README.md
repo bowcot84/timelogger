@@ -23,5 +23,6 @@ Currently supported desktop services are gnome and freedesktop
 
 #### Changes  
 
+"Add repository location to package.json and first commit of readme builder."  
 "Extra logging, bump package"  
 "First commit"  

@@ -1,10 +1,31 @@
 {
   "name": "timelogger",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Records log in and log out time on Centos",
   "main": "index.js",
   "author": "bowcot84",
-  "respository": "http://github.com/bowcot84/timelogger",
+  "contributors": [{
+    "name": "bowcot84",
+    "email": "npm@lenduz.com"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/bowcot84/timelogger"
+  },
+  "keywords": [
+    "centos",
+    "linux",
+    "timesheet",
+    "contract",
+    "time",
+    "timer",
+    "screensaver",
+    "screen lock",
+    "password",
+    "log",
+    "logging",
+    "logger"
+  ],
   "scripts": {
     "build": "node lib/createReadme.js"
   },
