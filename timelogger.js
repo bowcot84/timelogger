@@ -1,8 +1,12 @@
-//#Timelogger
-//Timelogger is a lightweight nodejs script to record time between screen locks on Linux
+//
+//# Timelogger
+//
+// Timelogger is a lightweight nodejs script to record time between screen locks on Linux
 //designed to help easily record time spend coding whilst on contract
-//######Let's go to work
-//To run
+//
+//###### Let's go to work
+//
+// To run
 //```node timelogger```
 process.title = "timelogger";
 var dbus = require('dbus-native');
@@ -13,7 +17,9 @@ var row;
 
 var statusChanged = function (status) {
     var time = new Date();
-    //######Output
+    //
+    //###### Output
+    //
     //The output is stored in log.csv
     //*  The first column indicates whether the user has started or stopped work
     //*  The second is the JS Date
@@ -27,7 +33,7 @@ var statusChanged = function (status) {
         start = time;
         row = ['start', time];
     }
-    //Currently save to a csv file
+    //Currently saves to /log.csv
     fs.appendFileSync(__dirname + '/log.csv', '\n' + row.join(","));
 };
 
@@ -56,25 +62,3 @@ desktops.forEach(function (desktop){
         }
     );
 });
-
-//######Timelogger as a service
-//Running timelogger will also generate an init.d script to allow you to run timelogger as a service
-//Stop the timelogger script then, as root...
-//```cp timelogger /etc/init.d```
-//```chmod 755 /etc/init.d/timelogger```
-//```service timelogger start```
-var replacements = {
-    appDirectory: __dirname,
-    nodeLocation: process.execPath,
-    user: process.env.USER,
-    dbusAddress: process.env.DBUS_SESSION_BUS_ADDRESS
-};
-//console.log(replacements);
-//console.log(process.env);
-var initScript = fs
-    .readFileSync(__dirname + '/lib/init.d', 'utf-8')
-    .replace(/{{(.*)}}/g, function(outer, inner){
-        return replacements[inner];
-    });
-//if (!fs.existsSync(__dirname +  '/timelogger'))
-    fs.writeFileSync(__dirname + '/timelogger', initScript);

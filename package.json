@@ -1,15 +1,11 @@
 {
-  "name": "timelog",
-  "version": "1.0.0",
-  "description": "Records log in and log out time on ",
+  "name": "timelogger",
+  "version": "1.0.3",
+  "description": "Records log in and log out time on Centos",
   "main": "index.js",
-  "author": "",
-  "scripts": {
-    "build": "./build.js"
-  },
+  "author": "bowcot84",
   "license": "ISC",
   "os": ["linux"],
-  "preferGlobal": true,
   "dependencies": {
     "dbus-native": "*"
   }
